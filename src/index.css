@@ -92,6 +92,7 @@ body {
   100% {
     /* Hidden (Cut 100% from the right) */
     opacity: 0;
+
     clip-path: inset(0 100% 0 0);
     transform: translate(100%);
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import AchievementCard from "../../ui/AchievementCard";
 
 const Achievement = () => {
   return (
@@ -23,43 +24,13 @@ const Achievement = () => {
         className="grid grid-cols-2 gap-4 lg:w-[1160px] lg:h-[275px] lg:flex lg:flex-row lg:gap-5"
       >
         {/* <!-- Achievement 1 --> */}
-        <div className="flex flex-col justify-center items-center size-[172.5px] rounded-full bg-[#FAFAFA] border-[#DEDCDC] lg:size-[275px] dark:bg-[#0A0D12] dark:border-[#181D27]">
-          <h2 className="w-[140px] h-[44px] text-[36px]/[44px] font-bold text-center text-[#FF623E] lg:w-[243px] lg:h-[60px] lg:text-[48px]/[60px]">
-            50+
-          </h2>
-          <p className="text-[14px]/[28px] font-semibold text-[#0A0D12] text-center lg:text-[20px]/[34px] dark:text-current">
-            Projects Delivered
-          </p>
-        </div>
+        <AchievementCard figure="50+" text="Projects Delivered" />
         {/* <!-- Achievement 2 --> */}
-        <div className="flex flex-col justify-center items-center size-[172.5px] rounded-full bg-[#FAFAFA] border-[#DEDCDC] lg:size-[275px] dark:bg-[#0A0D12] dark:border-[#181D27]">
-          <h2 className="w-[140px] h-[44px] text-[36px]/[44px] font-bold text-center text-[#FF623E] lg:w-[243px] lg:h-[60px] lg:text-[48px]/[60px]">
-            5+
-          </h2>
-          <p className="text-[14px]/[28px] font-semibold text-[#0A0D12] text-center lg:text-[20px]/[34px] dark:text-current">
-            Years of Experience
-          </p>
-        </div>
-
+        <AchievementCard figure="5+" text="Years of Experience" />
         {/* <!-- Achievement 3 --> */}
-        <div className="flex flex-col justify-center items-center size-[172.5px] rounded-full bg-[#FAFAFA] border-[#DEDCDC] lg:size-[275px] dark:bg-[#0A0D12] dark:border-[#181D27]">
-          <h2 className="w-[140px] h-[44px] text-[36px]/[44px] font-bold text-center text-[#FF623E] lg:w-[243px] lg:h-[60px] lg:text-[48px]/[60px]">
-            10+
-          </h2>
-          <p className="text-[14px]/[28px] font-semibold text-[#0A0D12] text-center lg:text-[20px]/[34px] dark:text-current">
-            Industry Awards Won
-          </p>
-        </div>
-
+        <AchievementCard figure="10+" text="Industry Awards Won" />
         {/* <!-- Achievement 4 --> */}
-        <div className="flex flex-col justify-center items-center size-[172.5px] rounded-full bg-[#FAFAFA] border-[#DEDCDC] lg:size-[275px] dark:bg-[#0A0D12] dark:border-[#181D27]">
-          <h2 className="w-[140px] h-[44px] text-[36px]/[44px] font-bold text-center text-[#FF623E] lg:w-[243px] lg:h-[60px] lg:text-[48px]/[60px]">
-            100%
-          </h2>
-          <p className="text-[14px]/[28px] font-semibold text-[#0A0D12] text-center lg:text-[20px]/[34px] dark:text-current">
-            Client Satisfaction Rate
-          </p>
-        </div>
+        <AchievementCard figure="100%" text="Client Satisfaction Rate" />
       </div>
     </section>
   );

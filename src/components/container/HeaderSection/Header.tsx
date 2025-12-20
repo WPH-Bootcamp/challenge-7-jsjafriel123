@@ -1,11 +1,39 @@
-import React from "react";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="relative">
-      <div className="fixed flex items-center justify-between w-full h-[64px] py-6 px-4 bg-white/40 backdrop-blur-md z-50 lg:h-[84px] lg:px-35 dark:bg-black/70">
-        <div id="logo" className="flex items-center">
-          <a href="#hero">
+      {/* Top Bar */}
+      <div className="fixed inset-x-0 top-0 z-50 flex h-[64px] items-center justify-between bg-white/40 px-4 backdrop-blur-2xl lg:h-[84px] lg:px-[140px] dark:bg-black/40">
+        {/* Logo */}
+        <a href="#hero" className="flex items-center">
+          <picture>
+            <source
+              srcSet="../src/assets/D-Your-Logo-white-L.svg"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img
+              src="../src/assets/Your-Logo-black-L.svg"
+              alt="Logo"
+              className="h-[32px] lg:h-[36px]"
+            />
+          </picture>
+        </a>
+
+        {/* Sliding Mobile Menu */}
+        <div
+          className={`inset-0 flex flex-col absolute z-90 h-[852px] items-center gap-4 bg-white backdrop-blur-md transform transition-all duration-600 ease-in-out lg:static lg:z-auto lg:h-[84px] lg:flex-row lg:bg-transparent lg:backdrop-blur-none 
+          ${
+            isMenuOpen
+              ? "opacity-100 dark:bg-black pointer-events-auto translate-x-0"
+              : "opacity-0 pointer-events-none translate-x-full lg:opacity-100 lg:pointer-events-auto lg:translate-x-0 dark:bg-none"
+          }
+        `}
+        >
+          {/* Mobile Menu Header */}
+          <div className="flex h-[64px] w-full items-center justify-between px-4 lg:hidden">
             <picture>
               <source
                 srcSet="../src/assets/D-Your-Logo-white-L.svg"
@@ -13,119 +41,66 @@ const Header = () => {
               />
               <img
                 src="../src/assets/Your-Logo-black-L.svg"
-                alt="Logo Black Large"
-                className="h-[32px] lg:h-[36px]"
+                alt="Logo"
+                className="h-[32px]"
               />
             </picture>
+
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-xl font-bold"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Navigation */}
+          <nav className="flex w-[361px] flex-col gap-2 font-semibold text-[#0A0D12] lg:w-auto lg:flex-row lg:gap-3 lg:justify-between lg:h-[36px] dark:text-current">
+            <a href="#hero" onClick={() => setIsMenuOpen(false)}>
+              About
+            </a>
+            <a href="#service" onClick={() => setIsMenuOpen(false)}>
+              Service
+            </a>
+            <a href="#portfolio" onClick={() => setIsMenuOpen(false)}>
+              Projects
+            </a>
+            <a href="#testimony" onClick={() => setIsMenuOpen(false)}>
+              Testimonials
+            </a>
+            <a href="#faq" onClick={() => setIsMenuOpen(false)}>
+              FAQ
+            </a>
+          </nav>
+
+          {/* Mobile CTA */}
+          <a
+            href="#letstalk"
+            onClick={() => setIsMenuOpen(false)}
+            className="mt-10 flex h-[44px] w-[361px] items-center justify-center rounded-full bg-[#FF6C37] font-bold text-white lg:hidden"
+          >
+            Let's Talk
           </a>
         </div>
-        {/* =================================================================== */}
-        {/* ==========================HIDDEN Elements========================== */}
-        {/* =================================================================== */}
-        {/* Hidden checkbox to toggle menu */}
-        {/* <input type="checkbox" id="menu-toggle" className="peer sr-only" /> */}
-        <input
-          type="radio"
-          id="rad0"
-          name="curtain-switch"
-          className="radio0 sr-only"
-          defaultChecked
-        />
-        <input
-          type="radio"
-          id="rad1"
-          name="curtain-switch"
-          className="radio1 sr-only"
-        />
-        <input
-          type="radio"
-          id="rad2"
-          name="curtain-switch"
-          className="radio2 sr-only"
-        />
-        {/* Menu Container */}
-        <div
-          id="mobile-menu"
-          className="slide-curtain absolute top-0 right-0 w-full h-[852px] flex flex-col items-center gap-4 bg-white/90 backdrop-blur-3xl border border-gray-200 shadow-lg opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-in-out lg:static lg:flex-row lg:w-auto lg:h-[84px] lg:rounded-none lg:items-center lg:justify-between lg:border-none lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:opacity-100 lg:scale-100 lg:pointer-events-auto dark:border-gray-100"
-        >
-          {/* peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto  */}
-          <div
-            id="menu-header"
-            className="w-[393px] h-[64px] border-b-[1px] px-4 py-6 flex justify-between items-center lg:hidden"
-          >
-            {/* Logo in header menu */}
-            <picture>
-              <source
-                srcSet="../src/assets/D-Your-Logo-white-L.svg"
-                media="(prefers-color-scheme: dark)"
-              />
-              <img
-                src="../src/assets/Your-Logo-black-L.svg"
-                alt="Logo Black Small"
-                className="w-[141px] h-[32px]"
-              />
-            </picture>
-
-            <label
-              htmlFor="rad2"
-              className="cursor-pointer size-6 font-bold pointer-events-auto"
-            >
-              X
-            </label>
-            {/* <hr /> */}
-          </div>
-          <div className="w-auto h-[260px] flex flex-col lg:flex-row lg:h-auto lg:justify-between lg:items-center">
-            <nav className="w-[361px] h-[180px] flex flex-col gap-2 text-sm/[28px] font-semibold text-[#0A0D12] pointer-events-auto lg:flex lg:flex-row lg:justify-between lg:w-[499px] lg:h-[36px] lg:gap-3 dark:text-current">
-              <a
-                href="#hero"
-                className="lg:font-semibold lg:text-[16px]/[30px]"
-              >
-                About
-              </a>
-              <a
-                href="#service"
-                className="lg:font-semibold lg:text-[16px]/[30px]"
-              >
-                Service
-              </a>
-              <a
-                href="#portfolio"
-                className="lg:font-semibold lg:text-[16px]/[30px]"
-              >
-                Projects
-              </a>
-              <a
-                href="#testimony"
-                className="lg:font-semibold lg:text-[16px]/[30px]"
-              >
-                Testimonials
-              </a>
-              <a href="#faq" className="lg:font-semibold lg:text-[16px]/[30px]">
-                FAQ
-              </a>
-            </nav>
-            <a
-              href="#letstalk"
-              className="flex w-[361px] h-[44px] p-2 Gap-1 rounded-r-full rounded-l-full bg-[#FF6C37] text-white font-bold mt-10 items-center justify-center pointer-events-auto lg:hidden dark:bg-[#FF623E] dark:shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)]"
-            >
-              Let's Talk
-            </a>
-          </div>
-        </div>
-
-        {/* Label acts as the hamburger icon */}
-        <label
-          htmlFor="rad1"
-          className="cursor-pointer text-2xl font-black pointer-events-auto lg:hidden"
-        >
-          ☰
-        </label>
+        {/* Desktop CTA */}
         <a
           href="#letstalk"
-          className="hidden w-[197px] h-[44px] p-2 Gap-1 rounded-r-full rounded-l-full bg-[#FF6C37] text-white font-bold items-center justify-center pointer-events-auto lg:flex lg:justify-center"
+          className="hidden h-[44px] w-[197px] items-center justify-center rounded-full bg-[#FF6C37] font-bold text-white lg:flex"
         >
           Let's Talk
         </a>
+
+        {/* Hamburger (mobile) */}
+        <button
+          type="button"
+          aria-label="Open menu"
+          onClick={() => setIsMenuOpen(true)}
+          className="text-2xl font-black lg:hidden"
+        >
+          ☰
+        </button>
       </div>
     </header>
   );
