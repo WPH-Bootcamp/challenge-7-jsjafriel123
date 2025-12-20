@@ -14,7 +14,7 @@ const Testimony = () => {
         <h2 className="w-auto h-[76px] font-bold text-[28px]/[38px] text-[#0A0D12] text-center lg:h-14 lg:text-10/14 dark:text-current">
           What Partners Say About Working With Us
         </h2>
-        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px]">
+        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
           Trusted voices. Real experiences. Proven results.
         </p>
       </div>

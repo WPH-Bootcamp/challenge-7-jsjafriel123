@@ -1,4 +1,3 @@
-import React from "react";
 import AchievementCard from "../../ui/AchievementCard";
 
 const Achievement = () => {
@@ -11,10 +10,10 @@ const Achievement = () => {
         id="achievement-header"
         className="flex flex-col w-[361px] h-[143px] gap-[11px] items-center lg:w-[1160px] lg:h-[99px]"
       >
-        <h2 className="w-auto h-[76px] font-bold text-[28px] text-[#0A0D12] text-center lg:h-14 lg:text-[40px]/14 dark:text-current">
+        <h2 className="w-auto h-[76px] font-bold text-[28px] text-[#0A0D12] text-center lg:h-[56px] lg:text-[40px]/[56px] dark:text-current">
           End-to-End IT Solutions That Drive Results
         </h2>
-        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/8">
+        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-[36px] lg:text-[18px]/[36px] dark:text-[#A4A7AE]">
           From strategy to execution, we deliver solutions that grow your
           business.
         </p>

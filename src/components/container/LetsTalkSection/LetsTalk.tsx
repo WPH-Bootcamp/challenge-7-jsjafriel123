@@ -16,7 +16,7 @@ const LetsTalk = () => {
           <h2 className="w-auto h-[38px] font-bold text-[28px]/[38px] text-[#0A0D12] text-center lg:h-[56px] lg:text-[40px]/[56px] dark:text-current">
             Ready to Start? Let’s Talk.
           </h2>
-          <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-[32px] lg:text-[18px]/[32px]">
+          <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-[32px] lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
             Tell us what you need, and we’ll get back to you soon.
           </p>
         </div>

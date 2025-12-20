@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion from "./Accordion";
 
 const FaQ = () => {
@@ -17,7 +16,7 @@ const FaQ = () => {
         <h2 className="w-auto h-[38px] font-bold text-[28px]/[38px] text-[#0A0D12] lg:h-auto lg:w-[331px] lg:text-[40px]/[56px] dark:text-current">
           Need Help? Start Here.
         </h2>
-        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] lg:h-[64px] lg:w-[245px] lg:text-[18px]/[32px]">
+        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] lg:h-[64px] lg:w-[245px] lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
           Everything you need to know — all in one place.
         </p>
       </div>

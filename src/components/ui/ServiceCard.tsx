@@ -15,7 +15,7 @@ const ServiceCard = ({
           <h3 className="font-bold text-[16px]/[30px] lg:text-[20px]/[34px]">
             {title}
           </h3>
-          <p className="text-[#717680] font-medium text-sm/[28px] lg:text-[16px]/[30px]">
+          <p className="text-[#717680] font-medium text-sm/[28px] lg:text-[16px]/[30px] dark:text-[#A4A7AE]">
             {description}
           </p>
         </div>

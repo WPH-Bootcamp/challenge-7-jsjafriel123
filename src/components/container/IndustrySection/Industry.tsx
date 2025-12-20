@@ -1,4 +1,3 @@
-import React from "react";
 import IndustryItems from "./IndustryItems";
 
 const Industry = () => {
@@ -18,7 +17,7 @@ const Industry = () => {
         <h2 className="w-auto h-[42px] font-bold text-[32px]/[42px] text-[#0A0D12] lg:h-14 lg:text-10/14 dark:text-current">
           Built for Your Industry
         </h2>
-        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] lg:h-8 lg:text-[18px]/[32px]">
+        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] lg:h-8 lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
           We’ve helped companies across industries launch smarter, faster, and
           more securely.
         </p>

@@ -1,11 +1,10 @@
-import React from "react";
 import ServiceCard from "../../ui/ServiceCard";
 
 const Service = () => {
   return (
     <section
       id="service"
-      className="flex flex-col w-[393px] h-[1800px] gap-10 px-4 py-10 items-center lg:w-full lg:h-[972px] lg:gap-16 lg:px-[140px] lg:py-20"
+      className="flex flex-col w-[393px] h-[1800921px] gap-10 px-4 py-10 items-center lg:w-full lg:h-[972px] lg:gap-16 lg:px-[140px] lg:py-20"
     >
       {/* <!-- -------------- -->
           <!-- Service Header -->
@@ -18,7 +17,7 @@ const Service = () => {
         <h2 className="w-auto h-[76px] font-bold text-[28px]/[38px] text-[#0A0D12] text-center lg:h-14 lg:text-10/14 dark:text-current">
           Smart IT Solutions That Grow With You
         </h2>
-        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px]">
+        <p className="w-auto h-[28px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
           Tailored tech to boost efficiency, security, and results.
         </p>
       </div>

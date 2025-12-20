@@ -19,7 +19,7 @@ function AccordionItem({
       onClick={() => setOpenIndex(isOpen ? null : index)}
     >
       {/* Header */}
-      <div className="flex flex-row w-auto h-auto gap-2 justify-between select-none">
+      <div className="flex flex-row w-auto h-auto gap-2 pt-4 justify-between select-none">
         <p className="w-[337px] h-auto font-bold text-[18px] lg:w-[770px] lg:h-[36px] lg:text-2xl/9">
           {question}
         </p>
@@ -66,7 +66,7 @@ function AccordionItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-sm/[28px] font-medium text-[#717680] lg:text-[20px]/[34px]">
+          <p className="text-sm/[28px] font-medium text-[#717680] lg:text-[20px]/[34px] dark:text-[#A4A7AE]">
             {answer}
           </p>
         </div>

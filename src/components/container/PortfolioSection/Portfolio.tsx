@@ -5,8 +5,8 @@ const Portfolio = () => {
       className="flex flex-col w-[393px] h-[1568px] gap-6 px-4 py-10 items-center lg:w-full lg:h-[772px] lg:px-35 lg:py-20 lg:gap-16"
     >
       {/* <!-- ---------------- -->
-            <!-- Portfolio Header -->
-            <!-- ---------------- --> */}
+          <!-- Portfolio Header -->
+          <!-- ---------------- --> */}
       <div
         id="portfolio-header"
         className="flex flex-col w-[361px] h-[143px] gap-[11px] items-center lg:w-[1160px] lg:h-[99px]"
@@ -14,7 +14,7 @@ const Portfolio = () => {
         <h2 className="w-auto h-[76px] font-bold text-[28px]/[38px] text-[#0A0D12] text-center lg:h-14 lg:text-10/14 dark:text-current">
           From Vision to Launch! Projects We’re Proud Of
         </h2>
-        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px]">
+        <p className="w-auto h-[56px] font-medium text-sm/[28px] text-[#717680] text-center lg:h-8 lg:text-[18px]/[32px] dark:text-[#A4A7AE]">
           Take a closer look at our recent work powering startups, enterprises,
           and everything in between.
         </p>
