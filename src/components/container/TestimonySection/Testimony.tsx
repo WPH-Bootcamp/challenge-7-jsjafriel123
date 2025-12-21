@@ -1,3 +1,41 @@
+import TestiCard from "../../ui/TestiCard";
+
+type testicard = {
+  id: number;
+  rating: string;
+  testimony: string;
+  name: string;
+  title: string;
+  photo: string;
+};
+
+const testicards: testicard[] = [
+  {
+    id: 0,
+    rating: "../public/assets/Rating.svg",
+    testimony: `“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”`,
+    name: "John Lee",
+    title: "Creative Director at Innovate Corp",
+    photo: "../public/assets/Testi-Lee.svg",
+  },
+  {
+    id: 1,
+    rating: "../public/assets/Rating.svg",
+    testimony: `“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”`,
+    name: "Sarah Tan",
+    title: "Product Manager at Finovate",
+    photo: "../public/assets/Testi-Sarah.svg",
+  },
+  {
+    id: 2,
+    rating: "../public/assets/Rating.svg",
+    testimony: `“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”`,
+    name: "Emily Chen",
+    title: "Marketing Head at Tech Solutions",
+    photo: "../public/assets/Testi-Emily.svg",
+  },
+];
+
 const Testimony = () => {
   return (
     <section
@@ -23,134 +61,31 @@ const Testimony = () => {
             <!-- --------- --> */}
       {/* <!-- Testimonial Cards --> */}
       <div className="w-full h-auto flex flex-row justify-center gap-4 overflow-hidden lg:relative">
-        {/* <!-- Card 1 -->
-          <!-- Container for Card and Icons --> */}
-        <div className="flex flex-col w-auto h-[328px] relative items-center pt-5 pb-6 lg:h-[350px] lg:pt-6 lg:pb-8">
-          {/* <!-- Card Container 1--> */}
-          <div className="flex flex-col w-[361px] h-[284px] pt-4 px-4 pb-12 gap-4 border-[1px] rounded-2xl border-[#DEDCDC] bg-[#FAFAFA] lg:w-[594px] lg:h-[292px] lg:gap-6 dark:bg-[#0A0D12] dark:border-[#181D27]">
-            <div className="flex flex-col w-[329] h-[148px] gap-3 items-center lg:w-[546px] lg:h-[132px]">
-              <img
-                src="../src/assets/Rating.svg"
-                alt="Rating"
-                className="w-34 h-6"
-              />
-              <p className="text-[#0A0D12] font-semibold text-sm/[28px] text-center lg:text-[18px]/8 dark:text-current">
-                “The team delivered exactly what we needed — on time and with
-                outstanding quality. Their attention to detail and communication
-                were top-notch.”
-              </p>
-            </div>
-            {/* <!-- Author --> */}
-            <div className="flex flex-col w-[329px] h-[56px] items-center lg:w-[546px] lg:h-[64px]">
-              <p className="text-sm/[28px] font-semibold text-[#0A0D12] lg:text-[18px]/8 dark:text-current">
-                Sarah Tan 1
-              </p>
-              <p className="text-sm/[28px] font-semibold text-[#FF623E] lg:text-[18px]/8">
-                Product Manager at Finovate
-              </p>
-            </div>
-          </div>
-          {/* <!-- Card Icon --> */}
-          <img
-            src="../src/assets/Icon-Quote.svg"
-            alt="Logo Quote"
-            className="h-[37.33px] w-auto absolute top-0 left-6 lg:h-[47px]"
+        {testicards.map((testicard) => (
+          <TestiCard
+            rating={testicard.rating}
+            testimony={testicard.testimony}
+            name={testicard.name}
+            title={testicard.title}
+            photo={testicard.photo}
           />
-          <img
-            src="../src/assets/Testi-Sarah.svg"
-            alt="Testimony Card"
-            className="size-[60px] absolute bottom-0 lg:h-[75px]"
-          />
-        </div>
-        {/* <!-- Card 2 -->
-          <!-- Container for Card and Icons --> */}
-        <div className="flex flex-col w-auto h-[328px] relative items-center pt-5 pb-6 lg:h-[350px] lg:pt-6 lg:pb-8">
-          {/* <!-- Card Container 2--> */}
-          <div className="flex flex-col w-[361px] h-[284px] pt-4 px-4 pb-12 gap-4 border-[1px] rounded-2xl border-[#DEDCDC] bg-[#FAFAFA] lg:w-[594px] lg:h-[292px] lg:gap-6 dark:bg-[#0A0D12] dark:border-[#181D27]">
-            <div className="flex flex-col w-[329] h-[148px] gap-3 items-center lg:w-[546px] lg:h-[132px]">
-              <img
-                src="../src/assets/Rating.svg"
-                alt="Rating"
-                className="w-34 h-6"
-              />
-              <p className="text-[#0A0D12] font-semibold text-sm/[28px] text-center lg:text-[18px]/8 dark:text-current">
-                “The team delivered exactly what we needed — on time and with
-                outstanding quality. Their attention to detail and communication
-                were top-notch.”
-              </p>
-            </div>
-            {/* <!-- Author --> */}
-            <div className="flex flex-col w-[329px] h-[56px] items-center lg:w-[546px] lg:h-[64px]">
-              <p className="text-sm/[28px] font-semibold text-[#0A0D12] lg:text-[18px]/8 dark:text-current">
-                Sarah Tan 2
-              </p>
-              <p className="text-sm/[28px] font-semibold text-[#FF623E] lg:text-[18px]/8">
-                Product Manager at Finovate
-              </p>
-            </div>
-          </div>
-          {/* <!-- Card Icon --> */}
-          <img
-            src="../src/assets/Icon-Quote.svg"
-            alt="Logo Quote"
-            className="h-[37.33px] w-auto absolute top-0 left-6 lg:h-[47px]"
-          />
-          <img
-            src="../src/assets/Testi-Sarah.svg"
-            alt="Testimony Card"
-            className="size-[60px] absolute bottom-0 lg:h-[75px]"
-          />
-        </div>
-        {/* <!-- Card 3 -->
-          <!-- Container for Card and Icons --> */}
-        <div className="flex flex-col w-auto h-[328px] relative items-center pt-5 pb-6 lg:h-[350px] lg:pt-6 lg:pb-8">
-          {/* <!-- Card Container 3--> */}
-          <div className="flex flex-col w-[361px] h-[284px] pt-4 px-4 pb-12 gap-4 border-[1px] rounded-2xl border-[#DEDCDC] bg-[#FAFAFA] lg:w-[594px] lg:h-[292px] lg:gap-6 dark:bg-[#0A0D12] dark:border-[#181D27]">
-            <div className="flex flex-col w-[329] h-[148px] gap-3 items-center lg:w-[546px] lg:h-[132px]">
-              <img
-                src="../src/assets/Rating.svg"
-                alt="Rating"
-                className="w-34 h-6"
-              />
-              <p className="text-[#0A0D12] font-semibold text-sm/[28px] text-center lg:text-[18px]/8 dark:text-current">
-                “The team delivered exactly what we needed — on time and with
-                outstanding quality. Their attention to detail and communication
-                were top-notch.”
-              </p>
-            </div>
-            {/* <!-- Author --> */}
-            <div className="flex flex-col w-[329px] h-[56px] items-center lg:w-[546px] lg:h-[64px]">
-              <p className="text-sm/[28px] font-semibold text-[#0A0D12] lg:text-[18px]/8 dark:text-current">
-                Sarah Tan 3
-              </p>
-              <p className="text-sm/[28px] font-semibold text-[#FF623E] lg:text-[18px]/8">
-                Product Manager at Finovate
-              </p>
-            </div>
-          </div>
-          {/* <!-- Card Icon --> */}
-          <img
-            src="../src/assets/Icon-Quote.svg"
-            alt="Logo Quote"
-            className="h-[37.33px] w-auto absolute top-0 left-6 lg:h-[47px]"
-          />
-          <img
-            src="../src/assets/Testi-Sarah.svg"
-            alt="Testimony Card"
-            className="size-[60px] absolute bottom-0 lg:h-[75px]"
-          />
-        </div>
-        {/* <!-- Right shadowing --> */}
+        ))}
+        ;{/* <!-- Right shadowing --> */}
         <div className="hidden lg:flex lg:absolute lg:left-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-r lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
         {/* <!-- Left shadowing --> */}
         <div className="hidden lg:flex lg:absolute lg:right-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-l lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
       </div>
       {/* <!-- Pagination --> */}
-      <img
-        src="../src/assets/Pagination.svg"
+      <div className="flex justify-between w-9 h-2 lg:w-12 lg:h-3">
+        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#FF6C37]"></button>
+        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#DEDCDC] dark:bg-[#181D27]"></button>
+        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#DEDCDC] dark:bg-[#181D27]"></button>
+      </div>
+      {/* <img
+        src="../public/assets/Pagination.svg"
         alt="Pagination"
         className="w-9 h-2 lg:w-12 lg:h-3"
-      />
+      /> */}
     </section>
   );
 };

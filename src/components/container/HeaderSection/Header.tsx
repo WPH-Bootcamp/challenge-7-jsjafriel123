@@ -11,11 +11,11 @@ const Header = () => {
         <a href="#hero" className="flex items-center">
           <picture>
             <source
-              srcSet="../src/assets/D-Your-Logo-white-L.svg"
+              srcSet="../public/assets/D-Your-Logo-white-L.svg"
               media="(prefers-color-scheme: dark)"
             />
             <img
-              src="../src/assets/Your-Logo-black-L.svg"
+              src="../public/assets/Your-Logo-black-L.svg"
               alt="Logo"
               className="h-[32px] lg:h-[36px]"
             />
@@ -36,11 +36,11 @@ const Header = () => {
           <div className="flex h-[64px] w-full items-center justify-between px-4 lg:hidden">
             <picture>
               <source
-                srcSet="../src/assets/D-Your-Logo-white-L.svg"
+                srcSet="../public/assets/D-Your-Logo-white-L.svg"
                 media="(prefers-color-scheme: dark)"
               />
               <img
-                src="../src/assets/Your-Logo-black-L.svg"
+                src="../public/assets/Your-Logo-black-L.svg"
                 alt="Logo"
                 className="h-[32px]"
               />

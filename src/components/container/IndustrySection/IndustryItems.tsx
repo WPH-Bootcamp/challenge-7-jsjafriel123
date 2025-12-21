@@ -6,21 +6,21 @@ const INDUSTRIES = [
     label: "Fintech",
     description:
       "We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.",
-    image: "../src/assets/Industry-Fintech.svg",
+    image: "../public/assets/Industry-Fintech.svg",
   },
   {
     id: 1,
     label: "E-Commerce",
     description:
       "Boost your online sales with fast, reliable platforms designed for seamless shopping experiences, inventory management, and payment integration.",
-    image: "../src/assets/Industry-Ecommerce.svg",
+    image: "../public/assets/Industry-Ecommerce.svg",
   },
   {
     id: 2,
     label: "Healthcare",
     description:
       "Empowering healthcare providers with digital solutions that improve patient care, ensure data privacy, and streamline operational workflows.",
-    image: "../src/assets/Industry-Health.svg",
+    image: "../public/assets/Industry-Health.svg",
   },
 ];
 

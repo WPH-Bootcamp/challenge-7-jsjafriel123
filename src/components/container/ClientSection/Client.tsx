@@ -1,6 +1,28 @@
 import React from "react";
+import ClientLogo from "../../ui/Logo/ClientLogo";
 
 const Client = () => {
+  type logo = {
+    source: string;
+    alternative: string;
+  };
+
+  const logos: logo[] = [
+    { source: "../public/assets/Company-logo_-4.svg", alternative: "Adobe" },
+    { source: "../public/assets/Company-logo_-3.svg", alternative: "Upwork" },
+    { source: "../public/assets/Company-logo_-2.svg", alternative: "Zoom" },
+    { source: "../public/assets/Company-logo_-1.svg", alternative: "Postman" },
+    {
+      source: "../public/assets/Company-logo_0.svg",
+      alternative: "Databricks",
+    },
+    { source: "../public/assets/Company-logo_1.svg", alternative: "Airbnb" },
+    { source: "../public/assets/Company-logo_2.svg", alternative: "Dropbox" },
+    { source: "../public/assets/Company-logo_3.svg", alternative: "Paypal" },
+    { source: "../public/assets/Company-logo_4.svg", alternative: "Netflix" },
+  ];
+  const longLogos = [...logos, ...logos];
+
   return (
     <section
       id="client"
@@ -26,96 +48,12 @@ const Client = () => {
           }
         >
           <div className="flex flex-row items-center gap-10">
-            <img
-              src="../src/assets/Company-logo_-4.svg"
-              alt="Adobe"
-              className="h-[48px] pl-10 grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-3.svg"
-              alt="Upwork"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-2.svg"
-              alt="Zoom"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-1.svg"
-              alt="Postman"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_0.svg"
-              alt="Databricks"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_1.svg"
-              alt="Airbnb"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_2.svg"
-              alt="Dropbox"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_3.svg"
-              alt="Paypal"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_4.svg"
-              alt="Netflix"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-4.svg"
-              alt="Adobe"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-3.svg"
-              alt="Upwork"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-2.svg"
-              alt="Zoom"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_-1.svg"
-              alt="Postman"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_0.svg"
-              alt="Databricks"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_1.svg"
-              alt="Airbnb"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_2.svg"
-              alt="Dropbox"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_3.svg"
-              alt="Paypal"
-              className="h-[48px] grayscale"
-            />
-            <img
-              src="../src/assets/Company-logo_4.svg"
-              alt="Netflix"
-              className="h-[48px] grayscale"
-            />
+            {longLogos.map((logo) => (
+              <ClientLogo
+                source={logo.source}
+                alternative={logo.alternative}
+              ></ClientLogo>
+            ))}
           </div>
         </div>
         <div className="absolute left-0 top-0 w-[46px] h-[98px] bg-gradient-to-r from-white to-white/0 lg:w-[260px] lg:h-[200px] dark:from-black dark:to-black/0"></div>

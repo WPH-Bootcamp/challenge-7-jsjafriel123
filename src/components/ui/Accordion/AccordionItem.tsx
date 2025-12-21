@@ -31,11 +31,11 @@ function AccordionItem({
           }`}
         >
           <source
-            srcSet="../src/assets/D-Icon-(+).svg"
+            srcSet="../public/assets/D-Icon-(+).svg"
             media="(prefers-color-scheme: dark)"
           />
           <img
-            src="../src/assets/Icon-(+).svg"
+            src="../public/assets/Icon-(+).svg"
             alt="Open"
             className="size-6 p-1"
           />
@@ -48,11 +48,11 @@ function AccordionItem({
           }`}
         >
           <source
-            srcSet="../src/assets/D-Icon-(-).svg"
+            srcSet="../public/assets/D-Icon-(-).svg"
             media="(prefers-color-scheme: dark)"
           />
           <img
-            src="../src/assets/Icon-(-).svg"
+            src="../public/assets/Icon-(-).svg"
             alt="Close"
             className="size-6 p-1"
           />

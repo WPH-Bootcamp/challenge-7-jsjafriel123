@@ -31,11 +31,11 @@ const Hero = () => {
       >
         <picture>
           <source
-            srcSet="../src/assets/D-Image-Hero.svg"
+            srcSet="../public/assets/D-Image-Hero.svg"
             media="(prefers-color-scheme: dark)"
           />
           <img
-            src="../src/assets/Image-Hero.svg"
+            src="../public/assets/Image-Hero.svg"
             alt="Hero Image"
             className="size-[391px] lg:size-[747px] lg:p-10"
           />

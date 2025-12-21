@@ -4,7 +4,7 @@ const Service = () => {
   return (
     <section
       id="service"
-      className="flex flex-col w-[393px] h-[1800921px] gap-10 px-4 py-10 items-center lg:w-full lg:h-[972px] lg:gap-16 lg:px-[140px] lg:py-20"
+      className="flex flex-col w-[393px] gap-10 px-4 py-10 items-center lg:w-full lg:h-[972px] lg:gap-16 lg:px-[140px] lg:py-20"
     >
       {/* <!-- -------------- -->
           <!-- Service Header -->
@@ -34,62 +34,62 @@ const Service = () => {
         <ServiceCard
           title="Web Development"
           description="Build fast, scalable, and SEO-friendly websites."
-          image="../src/assets/Service-Icon 1.svg"
+          image="../public/assets/Service-Icon 1.svg"
         />
         {/* <!-- Card Container 2--> */}
         <ServiceCard
           title="Mobile App Development"
           description="Native & cross-platform apps tailored to user needs."
-          image="../src/assets/Service-Icon 2.svg"
+          image="../public/assets/Service-Icon 2.svg"
         />
 
         {/* <!-- Card Container 3--> */}
         <ServiceCard
           title="UI/UX Design"
           description="Delight users with intuitive and beautiful interfaces."
-          image="../src/assets/Service-Icon 3.svg"
+          image="../public/assets/Service-Icon 3.svg"
         />
 
         {/* <!-- Card Container 4--> */}
         <ServiceCard
           title="Cloud Solutions"
           description="Secure and flexible cloud infrastructure for your growth."
-          image="../src/assets/Service-Icon 4.svg"
+          image="../public/assets/Service-Icon 4.svg"
         />
 
         {/* <!-- Card Container 5--> */}
         <ServiceCard
           title="Software Development"
           description="Custom solutions built around your business logic."
-          image="../src/assets/Service-Icon 5.svg"
+          image="../public/assets/Service-Icon 5.svg"
         />
 
         {/* <!-- Card Container 6--> */}
         <ServiceCard
           title="IT Infrastructure"
           description="Scale your backend with reliable tech foundations."
-          image="../src/assets/Service-Icon 6.svg"
+          image="../public/assets/Service-Icon 6.svg"
         />
 
         {/* <!-- Card Container 7--> */}
         <ServiceCard
           title="Cybersecurity Services"
           description="Stay protected with enterprise-grade security."
-          image="../src/assets/Service-Icon 7.svg"
+          image="../public/assets/Service-Icon 7.svg"
         />
 
         {/* <!-- Card Container 8--> */}
         <ServiceCard
           title="QA Solutions"
           description="Ensure performance with rigorous testing frameworks."
-          image="../src/assets/Service-Icon 8.svg"
+          image="../public/assets/Service-Icon 8.svg"
         />
 
         {/* <!-- Card Container 9--> */}
         <ServiceCard
           title="IT Consulting & Support"
           description="Make smarter tech decisions with expert guidance."
-          image="../src/assets/Service-Icon 9.svg"
+          image="../public/assets/Service-Icon 9.svg"
         />
       </div>
     </section>
