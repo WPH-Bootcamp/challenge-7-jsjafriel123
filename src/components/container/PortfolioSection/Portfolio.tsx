@@ -27,7 +27,7 @@ const Portfolio = () => {
         {/* <!-- Card 1 --> */}
         <div className="flex flex-col w-auto h-[427px] gap-2 lg:h-[449px] lg:gap-3">
           <img
-            src="../public/assets/Portfolio 1.svg"
+            src="../assets/Portfolio 1.svg"
             alt="Portfolio 1"
             className="size-[361px] rounded-2xl lg:size-[373px]"
           />
@@ -43,7 +43,7 @@ const Portfolio = () => {
         {/* <!-- Card 2 --> */}
         <div className="flex flex-col w-auto h-[427px] gap-2 lg:h-[449px] lg:gap-3">
           <img
-            src="../public/assets/Portfolio 2.svg"
+            src="../assets/Portfolio 2.svg"
             alt="Portfolio 2"
             className="size-[361px] rounded-2xl lg:size-[373px]"
           />
@@ -59,7 +59,7 @@ const Portfolio = () => {
         {/* <!-- Card 3 --> */}
         <div className="flex flex-col w-auto h-[427px] gap-2 lg:h-[449px] lg:gap-3">
           <img
-            src="../public/assets/Portfolio 3.svg"
+            src="../assets/Portfolio 3.svg"
             alt="Portfolio 3"
             className="size-[361px] rounded-2xl lg:size-[373px]"
           />

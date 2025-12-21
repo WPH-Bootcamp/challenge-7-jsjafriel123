@@ -49,7 +49,7 @@ const FaQ = () => {
           </div>
           {/* <!-- Image --> */}
           <img
-            src="../public/assets/Consultation Image.svg"
+            src="../assets/Consultation Image.svg"
             alt="Consultation Image"
             className="w-[321px] h-auto rounded-2xl lg:w-[281px]"
           />

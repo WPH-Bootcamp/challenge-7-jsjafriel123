@@ -15,7 +15,7 @@ const Header = () => {
               media="(prefers-color-scheme: dark)"
             />
             <img
-              src="../public/assets/Your-Logo-black-L.svg"
+              src="../assets/Your-Logo-black-L.svg"
               alt="Logo"
               className="h-[32px] lg:h-[36px]"
             />
@@ -40,7 +40,7 @@ const Header = () => {
                 media="(prefers-color-scheme: dark)"
               />
               <img
-                src="../public/assets/Your-Logo-black-L.svg"
+                src="../assets/Your-Logo-black-L.svg"
                 alt="Logo"
                 className="h-[32px]"
               />
@@ -50,7 +50,7 @@ const Header = () => {
               type="button"
               aria-label="Close menu"
               onClick={() => setIsMenuOpen(false)}
-              className="text-xl font-bold"
+              className="text-xl font-bold cursor-pointer"
             >
               ✕
             </button>
@@ -97,7 +97,7 @@ const Header = () => {
           type="button"
           aria-label="Open menu"
           onClick={() => setIsMenuOpen(true)}
-          className="text-2xl font-black lg:hidden"
+          className="text-2xl font-black cursor-pointer lg:hidden"
         >
           ☰
         </button>

@@ -11,11 +11,11 @@ const Footer = () => {
           {/* <!-- Logo left for mobile --> */}
           <picture className="order-1 lg:order-3">
             <source
-              srcSet="../public/assets/D-Your-Logo-White-L.svg"
+              srcSet="../assets/D-Your-Logo-White-L.svg"
               media="(prefers-color-scheme: dark)"
             />
             <img
-              src="../public/assets/Your-Logo-black-L.svg"
+              src="../assets/Your-Logo-black-L.svg"
               alt="Logo"
               className="w-[141px] h-[32px] lg:w-[158.63px] lg:h-[36px]"
             />
@@ -67,11 +67,11 @@ const Footer = () => {
           {/* <!-- Social Media Icons --> */}
           <picture>
             <source
-              srcSet="../public/assets/D-Social-Media-Icons.svg"
+              srcSet="../assets/D-Social-Media-Icons.svg"
               media="(prefers-color-scheme: dark)"
             />
             <img
-              src="../public/assets/Social Media Icons.svg"
+              src="../assets/Social Media Icons.svg"
               alt="Sosmed Icons"
               className="size-full flex w-auto h-[40px]"
             />

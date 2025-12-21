@@ -31,14 +31,10 @@ function AccordionItem({
           }`}
         >
           <source
-            srcSet="../public/assets/D-Icon-(+).svg"
+            srcSet="../assets/D-Icon-(+).svg"
             media="(prefers-color-scheme: dark)"
           />
-          <img
-            src="../public/assets/Icon-(+).svg"
-            alt="Open"
-            className="size-6 p-1"
-          />
+          <img src="../assets/Icon-(+).svg" alt="Open" className="size-6 p-1" />
         </picture>
 
         {/* MINUS icon */}
@@ -48,11 +44,11 @@ function AccordionItem({
           }`}
         >
           <source
-            srcSet="../public/assets/D-Icon-(-).svg"
+            srcSet="../assets/D-Icon-(-).svg"
             media="(prefers-color-scheme: dark)"
           />
           <img
-            src="../public/assets/Icon-(-).svg"
+            src="../assets/Icon-(-).svg"
             alt="Close"
             className="size-6 p-1"
           />

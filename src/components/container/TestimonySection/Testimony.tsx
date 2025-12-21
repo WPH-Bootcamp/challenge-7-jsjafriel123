@@ -37,7 +37,25 @@ const testicards: testicard[] = [
   },
 ];
 
+const pageIndex = [{ id: 0 }, { id: 1 }, { id: 2 }];
+
+function rotateToMiddle(cards: testicard[], selectedIndex: number) {
+  const middleIndex = 1;
+  const shift = selectedIndex - middleIndex;
+
+  return cards.map((_, i) => {
+    const newIndex = (i + shift + cards.length) % cards.length;
+    return cards[newIndex];
+  });
+}
+
 const Testimony = () => {
+  const [selected, setSelected] = useState(1);
+
+  // const selected = testicards[selectedIndex];
+  const displayItems = rotateToMiddle(testicards, selected);
+  // console.log(displayItems);
+
   return (
     <section
       id="testimony"
@@ -61,32 +79,43 @@ const Testimony = () => {
             <!-- Testimony -->
             <!-- --------- --> */}
       {/* <!-- Testimonial Cards --> */}
-      <div className="w-[393px] h-auto flex flex-row justify-center gap-4 overflow-hidden lg:w-auto lg:relative">
-        {testicards.map((testicard) => (
-          <TestiCard
-            rating={testicard.rating}
-            testimony={testicard.testimony}
-            name={testicard.name}
-            title={testicard.title}
-            photo={testicard.photo}
-          />
-        ))}
+      <div className="flex w-full justify-center lg:relative">
+        <div className="w-[393px] h-auto flex justify-center gap-4 overflow-hidden lg:w-auto">
+          {displayItems.map((testicard) => {
+            return (
+              <TestiCard
+                rating={testicard.rating}
+                testimony={testicard.testimony}
+                name={testicard.name}
+                title={testicard.title}
+                photo={testicard.photo}
+              />
+            );
+          })}
+        </div>
         ;{/* <!-- Right shadowing --> */}
         <div className="hidden lg:flex lg:absolute lg:left-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-r lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
         {/* <!-- Left shadowing --> */}
         <div className="hidden lg:flex lg:absolute lg:right-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-l lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
       </div>
-      {/* <!-- Pagination --> */}
+      {/* <!-- PAGINATION --> */}
       <div className="flex justify-between w-9 h-2 lg:w-12 lg:h-3">
-        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#FF6C37]"></button>
-        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#DEDCDC] dark:bg-[#181D27]"></button>
-        <button className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#DEDCDC] dark:bg-[#181D27]"></button>
+        {pageIndex.map((option, index) => {
+          const isActive = selected === index; //True or False
+
+          return (
+            <button
+              key={option.id}
+              onClick={() => setSelected(index)}
+              className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full ${
+                isActive
+                  ? "cursor-default  bg-[#FF6C37]"
+                  : "cursor-pointer bg-[#DEDCDC] dark:bg-[#181D27]"
+              }`}
+            ></button>
+          );
+        })}
       </div>
-      {/* <img
-        src="../public/assets/Pagination.svg"
-        alt="Pagination"
-        className="w-9 h-2 lg:w-12 lg:h-3"
-      /> */}
     </section>
   );
 };

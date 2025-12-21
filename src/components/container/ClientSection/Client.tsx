@@ -8,18 +8,18 @@ const Client = () => {
   };
 
   const logos: logo[] = [
-    { source: "../public/assets/Company-logo_-4.svg", alternative: "Adobe" },
-    { source: "../public/assets/Company-logo_-3.svg", alternative: "Upwork" },
-    { source: "../public/assets/Company-logo_-2.svg", alternative: "Zoom" },
-    { source: "../public/assets/Company-logo_-1.svg", alternative: "Postman" },
+    { source: "../assets/Company-logo_-4.svg", alternative: "Adobe" },
+    { source: "../assets/Company-logo_-3.svg", alternative: "Upwork" },
+    { source: "../assets/Company-logo_-2.svg", alternative: "Zoom" },
+    { source: "../assets/Company-logo_-1.svg", alternative: "Postman" },
     {
-      source: "../public/assets/Company-logo_0.svg",
+      source: "../assets/Company-logo_0.svg",
       alternative: "Databricks",
     },
-    { source: "../public/assets/Company-logo_1.svg", alternative: "Airbnb" },
-    { source: "../public/assets/Company-logo_2.svg", alternative: "Dropbox" },
-    { source: "../public/assets/Company-logo_3.svg", alternative: "Paypal" },
-    { source: "../public/assets/Company-logo_4.svg", alternative: "Netflix" },
+    { source: "../assets/Company-logo_1.svg", alternative: "Airbnb" },
+    { source: "../assets/Company-logo_2.svg", alternative: "Dropbox" },
+    { source: "../assets/Company-logo_3.svg", alternative: "Paypal" },
+    { source: "../assets/Company-logo_4.svg", alternative: "Netflix" },
   ];
   const longLogos = [...logos, ...logos];
 
