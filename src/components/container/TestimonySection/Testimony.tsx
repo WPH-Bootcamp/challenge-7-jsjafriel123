@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TestiCard from "../../ui/TestiCard";
 
 type testicard = {
@@ -12,27 +13,27 @@ type testicard = {
 const testicards: testicard[] = [
   {
     id: 0,
-    rating: "../public/assets/Rating.svg",
+    rating: "../assets/Rating.svg",
     testimony: `“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”`,
     name: "John Lee",
     title: "Creative Director at Innovate Corp",
-    photo: "../public/assets/Testi-Lee.svg",
+    photo: "../assets/Testi-Lee.svg",
   },
   {
     id: 1,
-    rating: "../public/assets/Rating.svg",
+    rating: "../assets/Rating.svg",
     testimony: `“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”`,
     name: "Sarah Tan",
     title: "Product Manager at Finovate",
-    photo: "../public/assets/Testi-Sarah.svg",
+    photo: "../assets/Testi-Sarah.svg",
   },
   {
     id: 2,
-    rating: "../public/assets/Rating.svg",
+    rating: "../assets/Rating.svg",
     testimony: `“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”`,
     name: "Emily Chen",
     title: "Marketing Head at Tech Solutions",
-    photo: "../public/assets/Testi-Emily.svg",
+    photo: "../assets/Testi-Emily.svg",
   },
 ];
 
@@ -60,7 +61,7 @@ const Testimony = () => {
             <!-- Testimony -->
             <!-- --------- --> */}
       {/* <!-- Testimonial Cards --> */}
-      <div className="w-full h-auto flex flex-row justify-center gap-4 overflow-hidden lg:relative">
+      <div className="w-[393px] h-auto flex flex-row justify-center gap-4 overflow-hidden lg:w-auto lg:relative">
         {testicards.map((testicard) => (
           <TestiCard
             rating={testicard.rating}
