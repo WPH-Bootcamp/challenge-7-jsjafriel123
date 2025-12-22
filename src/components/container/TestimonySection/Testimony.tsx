@@ -37,7 +37,7 @@ const testicards: testicard[] = [
   },
 ];
 
-const pageIndex = [{ id: 0 }, { id: 1 }, { id: 2 }];
+const pageIndex = [0, 1, 2];
 
 function rotateToMiddle(cards: testicard[], selectedIndex: number) {
   const middleIndex = 1;
@@ -53,7 +53,7 @@ const Testimony = () => {
   const [selected, setSelected] = useState(1);
 
   // const selected = testicards[selectedIndex];
-  const displayItems = rotateToMiddle(testicards, selected);
+  //   const displayItems = rotateToMiddle(testicards, selected);
   // console.log(displayItems);
 
   return (
@@ -79,33 +79,54 @@ const Testimony = () => {
             <!-- Testimony -->
             <!-- --------- --> */}
       {/* <!-- Testimonial Cards --> */}
-      <div className="flex w-full justify-center lg:relative">
-        <div className="w-[393px] h-auto flex justify-center gap-4 overflow-hidden lg:w-auto">
-          {displayItems.map((testicard) => {
-            return (
-              <TestiCard
-                rating={testicard.rating}
-                testimony={testicard.testimony}
-                name={testicard.name}
-                title={testicard.title}
-                photo={testicard.photo}
-              />
-            );
-          })}
+      <div className="w-full h-auto">
+        <div className="flex w-full justify-center lg:relative">
+          <div className="w-[393px] h-auto flex justify-center gap-4 overflow-hidden lg:w-auto">
+            {testicards.map((testicard, index) => {
+              const offset = index - selected; // -1, 0, 1
+              console.log(`index=` + index);
+              console.log(`selected=` + selected);
+              console.log(`offset=` + offset);
+
+              return (
+                <div
+                  key={index}
+                  //   onClick={() => setActive(index)}
+                  className={`transition-transform duration-600 ease-out absolute ${
+                    offset === 0
+                      ? "lg:scale-110 lg:z-10 lg:opacity-100"
+                      : "lg:scale-95 lg:z-0 lg:opacity-70"
+                  }
+`}
+                  style={{
+                    transform: `translateX(${offset * 636}px)`,
+                  }}
+                >
+                  <TestiCard
+                    rating={testicard.rating}
+                    testimony={testicard.testimony}
+                    name={testicard.name}
+                    title={testicard.title}
+                    photo={testicard.photo}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          {/* <!-- Right shadowing --> */}
+          <div className="hidden lg:flex lg:absolute lg:left-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-r lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
+          {/* <!-- Left shadowing --> */}
+          <div className="hidden lg:flex lg:absolute lg:right-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-l lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
         </div>
-        ;{/* <!-- Right shadowing --> */}
-        <div className="hidden lg:flex lg:absolute lg:left-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-r lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
-        {/* <!-- Left shadowing --> */}
-        <div className="hidden lg:flex lg:absolute lg:right-0 lg:top-0 lg:w-[400px] lg:h-[389px] lg:bg-gradient-to-l lg:from-white lg:to-white/0 dark:from-black dark:to-black/0"></div>
       </div>
       {/* <!-- PAGINATION --> */}
-      <div className="flex justify-between w-9 h-2 lg:w-12 lg:h-3">
+      <div className="relative top-85 flex justify-between w-9 h-2 lg:w-12 lg:h-3">
         {pageIndex.map((option, index) => {
           const isActive = selected === index; //True or False
 
           return (
             <button
-              key={option.id}
+              key={option}
               onClick={() => setSelected(index)}
               className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full ${
                 isActive
