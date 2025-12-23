@@ -39,22 +39,18 @@ const testicards: testicard[] = [
 
 const pageIndex = [0, 1, 2];
 
-function rotateToMiddle(cards: testicard[], selectedIndex: number) {
-  const middleIndex = 1;
-  const shift = selectedIndex - middleIndex;
+// function rotateToMiddle(cards: testicard[], selectedIndex: number) {
+//   const middleIndex = 1;
+//   const shift = selectedIndex - middleIndex;
 
-  return cards.map((_, i) => {
-    const newIndex = (i + shift + cards.length) % cards.length;
-    return cards[newIndex];
-  });
-}
+//   return cards.map((_, i) => {
+//     const newIndex = (i + shift + cards.length) % cards.length;
+//     return cards[newIndex];
+//   });
+// }
 
 const Testimony = () => {
   const [selected, setSelected] = useState(1);
-
-  // const selected = testicards[selectedIndex];
-  //   const displayItems = rotateToMiddle(testicards, selected);
-  // console.log(displayItems);
 
   return (
     <section
@@ -79,14 +75,11 @@ const Testimony = () => {
             <!-- Testimony -->
             <!-- --------- --> */}
       {/* <!-- Testimonial Cards --> */}
-      <div className="w-full h-auto">
+      <div className="w-full h-[340px] static">
         <div className="flex w-full justify-center lg:relative">
           <div className="w-[393px] h-auto flex justify-center gap-4 overflow-hidden lg:w-auto">
             {testicards.map((testicard, index) => {
               const offset = index - selected; // -1, 0, 1
-              console.log(`index=` + index);
-              console.log(`selected=` + selected);
-              console.log(`offset=` + offset);
 
               return (
                 <div
@@ -120,7 +113,7 @@ const Testimony = () => {
         </div>
       </div>
       {/* <!-- PAGINATION --> */}
-      <div className="relative top-85 flex justify-between w-9 h-2 lg:w-12 lg:h-3">
+      <div className="flex justify-between w-9 h-2 lg:w-12 lg:h-3">
         {pageIndex.map((option, index) => {
           const isActive = selected === index; //True or False
 
